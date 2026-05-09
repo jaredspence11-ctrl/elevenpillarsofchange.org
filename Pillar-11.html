@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 11: Gun Reform — Eleven Pillars of Change</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --crimson: #c0392b;
+      --crimson-bright: #e74c3c;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --cream: #f5f0e8;
+      --cream-dim: #e8e0d0;
+      --white: #ffffff;
+      --gray: #8899aa;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Barlow', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    a { 
+      text-decoration: none; 
+    }
+
+    .hero-sub {
+      background: linear-gradient(160deg, #0a1628 0%, #112240 100%);
+      padding: 100px 24px 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .hero-sub-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson-bright);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0 0 24px 0;
+    }
+
+    .back-nav {
+      margin-top: 32px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .article-intro {
+      font-size: 22px;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .article-container h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 64px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .article-container p {
+      margin: 0 0 24px 0;
+      color: var(--cream-dim);
+    }
+
+    .how-box {
+      background: rgba(192, 57, 43, 0.04);
+      border-left: 4px solid var(--crimson);
+      padding: 32px;
+      margin: 32px 0 56px;
+    }
+
+    .how-box h3 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 20px 0;
+    }
+
+    .how-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .how-box li {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      position: relative;
+      color: var(--cream);
+    }
+
+    .how-box li::before {
+      content: "■";
+      color: var(--crimson-bright);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 14px;
+    }
+
+    .how-box li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    footer {
+      background: #060e1a;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-legal {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: rgba(136,153,170,0.6);
+      line-height: 1.8;
+    }
+    
+    .footer-legal a { color: rgba(136,153,170,0.8); }
+    .footer-legal a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .hero-sub { padding: 80px 20px 40px; }
+      .article-container { padding: 40px 20px; }
+      .how-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero-sub">
+    <p class="hero-sub-eyebrow">Pillar 11</p>
+    <h1 class="hero-sub-title">Gun Reform</h1>
+    <div class="back-nav">
+      <a href="index.html" class="btn-ghost">&larr; Back to Blueprint</a>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="article-intro">
+      The Second Amendment is part of the Constitution of the United States, and the right of law-abiding Americans to keep and bear arms is a right that this document respects and upholds. This is not a pillar about taking guns away from responsible, law-abiding citizens. It is a pillar about the simple, undeniable, and morally urgent reality that the United States suffers from a level of gun violence that is without parallel in the developed world, and that this violence is not inevitable, not acceptable, and not beyond our ability to address. Tens of thousands of Americans die from gun violence every year. It is the leading cause of death for American children and adolescents. Mass shootings have become so routine that they barely register in the national consciousness before the next one occurs. Other developed nations have faced similar challenges and addressed them through sensible, evidence-based policy without eliminating civilian gun ownership. We can do the same. The question is not whether we value the Second Amendment; we do. The question is whether we value the lives of our children, our families, and our communities enough to do what the evidence tells us works. The answer must be yes.
+    </div>
+
+    <h2>Universal Background Checks</h2>
+    <p>The single most basic, common-sense, and broadly supported gun reform in America is the universal background check: the requirement that every gun sale, regardless of where it occurs or who is selling, be subject to the same background check required of licensed dealers. Currently, the gun show loophole and private sale exemption allow millions of firearms to change hands every year without any background check whatsoever, providing easy access to weapons for people who are legally prohibited from owning them. There is no legitimate argument for this loophole. It serves no purpose beyond making it easier for dangerous people to obtain deadly weapons.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Pass federal legislation</strong> requiring that every firearm sale or transfer, including sales at gun shows, private sales between individuals, and online sales, be conducted through a federally licensed dealer and subject to a National Instant Criminal Background Check System check, with no exceptions beyond narrow circumstances such as transfers between immediate family members.</li>
+        <li><strong>Strengthen the NICS database</strong> by requiring that all relevant records, including mental health adjudications, domestic violence convictions, drug offenses, and other disqualifying factors, be reported to the system completely and promptly, closing the data gaps that have allowed prohibited persons to pass background checks due to incomplete records.</li>
+        <li><strong>Establish a maximum processing time</strong> for background checks with a clear protocol for cases that cannot be resolved within that timeframe that does not default to automatic approval, addressing the Charleston loophole that allowed the 2015 Charleston church shooter to purchase a firearm because his background check was not completed within three business days.</li>
+      </ul>
+    </div>
+
+    <h2>Red Flag Laws & Crisis Intervention</h2>
+    <p>Red flag laws, also known as Extreme Risk Protection Orders, allow family members, law enforcement, and in some states other designated individuals to petition a court to temporarily remove firearms from a person who is demonstrating signs of imminent danger to themselves or others. These laws have been demonstrated to reduce gun suicides and have been used to prevent potential mass shootings in documented cases. They represent a targeted, due-process-based intervention that keeps guns out of the hands of dangerous individuals while respecting the rights of law-abiding gun owners.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a federal baseline red flag law</strong> that sets minimum standards for Extreme Risk Protection Orders, while allowing states to adopt stronger provisions, ensuring that this life-saving tool is available in every state regardless of state-level political dynamics.</li>
+        <li><strong>Ensure that all red flag laws include</strong> robust due process protections, including notice, the right to a hearing, and the right to legal representation, so that firearms are removed only when there is genuine evidence of imminent danger and the rights of individuals who do not pose a danger are fully protected.</li>
+        <li><strong>Complement red flag laws</strong> with robust crisis intervention programs, including mobile mental health crisis teams, crisis hotlines, and community-based intervention programs, that address the underlying mental health and social factors that drive gun violence risk.</li>
+      </ul>
+    </div>
+
+    <h2>Assault Weapons & High-Capacity Magazines</h2>
+    <p>Military-style assault weapons and high-capacity magazines serve one purpose in civilian hands: maximizing the number of people who can be killed in the shortest possible time. They are not hunting weapons. They are not home defense weapons. They are weapons of war that have been used in virtually every mass shooting that has produced the largest death tolls in American history. The federal assault weapons ban that was in effect from 1994 to 2004 was associated with a significant reduction in mass shooting fatalities. Its expiration was followed by a dramatic increase in mass shooting deaths. The evidence is clear.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Reinstate and strengthen</strong> the federal assault weapons ban, prohibiting the manufacture, sale, and transfer of semi-automatic assault-style weapons and high-capacity magazines to civilians, with a carefully defined scope that targets weapons designed for military use while explicitly protecting standard hunting and sporting firearms.</li>
+        <li><strong>Establish a voluntary buyback program</strong> for currently owned assault weapons and high-capacity magazines, providing fair market compensation to owners who choose to surrender their weapons, reducing the number of these weapons in civilian circulation over time.</li>
+        <li><strong>Prohibit the manufacture, sale, and possession</strong> of bump stocks, forced reset triggers, and other devices that effectively convert semi-automatic weapons into automatic fire, closing the regulatory loophole that allowed the Las Vegas shooter to fire into a crowd at a rate approximating fully automatic fire.</li>
+        <li><strong>Limit magazine capacity</strong> for civilian firearms to a maximum of ten rounds, recognizing that the ability to fire dozens of rounds without reloading is the critical factor that transforms a shooting incident into a mass casualty event.</li>
+      </ul>
+    </div>
+
+    <h2>Safe Storage & Responsible Ownership</h2>
+    <p>Responsible gun ownership includes the obligation to store firearms safely, preventing access by children, reducing theft that puts guns into criminal hands, and minimizing the risk of impulsive suicide using a readily accessible firearm. Safe storage laws have been demonstrated to reduce accidental shootings, youth suicides, and gun theft without meaningfully impeding the ability of responsible gun owners to access their firearms for legitimate purposes.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish federal safe storage requirements</strong> for all civilian firearms, requiring that guns be stored in a locked container or with a trigger lock when not in use, with enhanced requirements for households with children.</li>
+        <li><strong>Provide federal funding</strong> for safe storage device distribution programs that make gun safes, trigger locks, and other storage devices available at low or no cost to gun owners who cannot afford them, recognizing that the cost of safe storage should not be a barrier to responsible ownership.</li>
+        <li><strong>Establish civil liability</strong> for gun owners whose improperly stored firearms are accessed by children or stolen and subsequently used in crimes, creating meaningful financial incentives for responsible storage beyond criminal penalties.</li>
+      </ul>
+    </div>
+
+    <h2>Licensing, Training & Registration</h2>
+    <p>Owning and operating a motor vehicle in the United States requires a license, training, registration, and insurance. These requirements do not prevent law-abiding Americans from owning and driving cars; they create a system of accountability and competency that makes roads safer for everyone. There is no principled reason why firearms, which are at least as dangerous as motor vehicles and which are specifically designed to cause harm, should be subject to fewer accountability requirements than automobiles.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a federal firearm owner licensing system</strong> requiring that all individuals who purchase or possess firearms obtain a license demonstrating completion of a comprehensive firearms safety and competency training course, a clean background check, and basic firearms knowledge.</li>
+        <li><strong>Establish a national firearms registration system</strong> that creates a reliable record of firearm ownership, facilitating the recovery of stolen weapons, the tracing of crime guns, and the enforcement of laws prohibiting firearm possession by prohibited persons.</li>
+        <li><strong>Establish a mandatory waiting period</strong> of a minimum of fourteen days between the purchase and transfer of any firearm, providing a cooling-off period that has been demonstrated to reduce impulsive gun violence, particularly suicide, and allowing time for background checks to be thoroughly completed.</li>
+      </ul>
+    </div>
+
+    <h2>Ammunition Regulation & Firearm Liability Insurance</h2>
+    <p>Comprehensive gun violence prevention requires addressing not just the acquisition and possession of firearms but the ammunition that makes them lethal and the financial accountability mechanisms that incentivize safe storage and responsible ownership. Background checks at the point of sale do not prevent a person who passes a check today from later becoming a prohibited person and retaining their firearm. Ammunition regulation and firearm liability insurance incentives address different dimensions of the same problem: ensuring that the people who own guns are vetted at the point of ongoing use, not just initial acquisition, and that the costs of gun violence are borne by gun owners rather than externalized onto victims, communities, and taxpayers.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Require background checks</strong> for all purchases of ammunition above a defined quantity per month, limiting bulk ammunition purchases that have no legitimate sporting purpose and that provide the capacity for mass casualty events.</li>
+        <li><strong>Require that ammunition be serialized</strong> to enable law enforcement to trace ammunition used in crimes back to the point of sale, creating accountability in the supply chain analogous to the tracing system that exists for firearms themselves.</li>
+        <li><strong>Establish a Voluntary Firearm Safety Insurance Incentive Program</strong> that provides meaningful tax credits, reduced licensing fees, and federal grant incentives to firearm owners who obtain liability insurance coverage for harm caused by their firearm, whether through use, theft due to inadequate storage, or negligent handling. Insurance markets will create powerful financial incentives for safe storage, proper training, and responsible ownership without restricting the rights of law-abiding gun owners.</li>
+      </ul>
+      <p><em>A note on constitutional limits: while mandatory liability insurance for motor vehicle operation has been upheld as a condition of using public roads, a mandatory insurance requirement tied to the mere ownership of a firearm would face serious Second Amendment challenge under District of Columbia v. Heller, 554 U.S. 570 (2008), which protects the right to keep arms in the home independent of any licensing or fee condition. This proposal therefore operates through positive incentives rather than mandates, achieving the same goal of promoting financial accountability and safe ownership practices through voluntary participation.</em></p>
+    </div>
+
+    <h2>Addressing the Gun Trafficking Pipeline</h2>
+    <p>The majority of guns used in crimes in American cities did not originate in those cities; they traveled there through a pipeline of straw purchases, theft, and illegal trafficking that exploits weak gun laws in some states to flood communities across the country with illegal weapons. Addressing gun violence in American cities requires addressing the trafficking pipeline that supplies those cities with illegal weapons.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Strengthen federal laws</strong> against straw purchasing, the practice of buying a gun on behalf of someone who cannot legally purchase one, with mandatory minimum sentences that reflect the serious downstream consequences of providing illegal weapons to prohibited persons.</li>
+        <li><strong>Strengthen the ATF's authority and resources</strong> to regulate and oversee licensed firearms dealers, addressing the small number of dealers who are responsible for a disproportionate share of crime guns through inadequate record keeping, failure to conduct background checks, and in some cases deliberate facilitation of illegal sales.</li>
+        <li><strong>Close the ghost gun loophole</strong>, which allows individuals to purchase firearms in kit form or manufacture them using 3D printers without serial numbers or background checks, by requiring that all firearm components capable of being assembled into a functional weapon be subject to the same regulations as completed firearms.</li>
+        <li><strong>Address the accelerating ghost gun crisis</strong> through binding federal regulations that require serial numbers on all firearm components capable of being readily converted into functional firearms, including unfinished frames and receivers, and that extend background check requirements to the purchase of firearm kits and components.</li>
+        <li><strong>Establish federal standards</strong> requiring that any device capable of producing functional firearm components be subject to the same registration and accountability requirements as conventional firearm manufacturers.</li>
+      </ul>
+    </div>
+
+    <h2>Domestic Violence & Firearms</h2>
+    <p>The intersection of domestic violence and firearms is one of the most deadly and most preventable dimensions of America's gun violence crisis. The presence of a gun in a domestic violence situation increases the risk of homicide by approximately five times. Yet current law contains significant gaps that allow domestic abusers to retain or acquire firearms, and enforcement of existing prohibitions is inconsistent and inadequate. Closing these gaps is one of the highest-impact, most evidence-based steps America can take to reduce gun violence.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Close the boyfriend loophole</strong>, which currently exempts dating partners who are not married to or do not cohabit with their victims from the federal prohibition on firearm possession by domestic abusers, by extending the prohibition to all individuals convicted of domestic violence or subject to domestic violence restraining orders regardless of their relationship to the victim.</li>
+        <li><strong>Establish mandatory surrender requirements</strong> for individuals who become subject to domestic violence convictions or restraining orders, with active law enforcement follow-up to ensure that firearms are actually surrendered rather than simply required to be surrendered on paper.</li>
+      </ul>
+    </div>
+
+    <h2>Mental Health & Gun Violence</h2>
+    <p>The relationship between mental illness and gun violence is more complex and more nuanced than political discourse typically acknowledges. The vast majority of people with mental illness are not violent and are far more likely to be victims of violence than perpetrators. Conflating mental illness with gun violence stigmatizes people who need help and diverts attention from the evidence-based interventions that actually reduce gun violence. At the same time, there are specific mental health conditions and crisis situations that do represent elevated risk, and addressing those risks through appropriate clinical and legal interventions is an important component of a comprehensive gun violence prevention strategy.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Invest in the mental health system</strong> as outlined in Pillar 3, recognizing that the most effective mental health contribution to gun violence reduction is ensuring that people in crisis have access to timely, appropriate, and compassionate mental health care before they reach a point of danger to themselves or others.</li>
+        <li><strong>Establish lethal means counseling</strong> as a standard component of mental health crisis intervention, training mental health providers, emergency room staff, and crisis counselors to assess firearm access as a standard component of suicide risk assessment and to counsel patients and families on temporary firearm storage during periods of elevated risk.</li>
+        <li><strong>Reject the false and stigmatizing narrative</strong> that mental illness is the primary driver of gun violence. The evidence does not support this claim. The commitment must be to evidence-based interventions that address the specific, well-defined circumstances in which mental health and gun access intersect to create elevated risk.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-title">Eleven Pillars of Change</div>
+    <div class="footer-legal">
+      Copyright &copy; Jared Spence, 2026. All rights reserved.<br/>
+      Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>.<br/>
+      Contact: <a href="mailto:eleven-pillars-of-change@outlook.com">eleven-pillars-of-change@outlook.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

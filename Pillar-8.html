@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 8: Energy & Environment — Eleven Pillars of Change</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --crimson: #c0392b;
+      --crimson-bright: #e74c3c;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --cream: #f5f0e8;
+      --cream-dim: #e8e0d0;
+      --white: #ffffff;
+      --gray: #8899aa;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Barlow', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    a { 
+      text-decoration: none; 
+    }
+
+    .hero-sub {
+      background: linear-gradient(160deg, #0a1628 0%, #112240 100%);
+      padding: 100px 24px 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .hero-sub-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson-bright);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0 0 24px 0;
+    }
+
+    .back-nav {
+      margin-top: 32px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .article-intro {
+      font-size: 22px;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .article-container h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 64px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .article-container p {
+      margin: 0 0 24px 0;
+      color: var(--cream-dim);
+    }
+
+    .how-box {
+      background: rgba(192, 57, 43, 0.04);
+      border-left: 4px solid var(--crimson);
+      padding: 32px;
+      margin: 32px 0 56px;
+    }
+
+    .how-box h3 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 20px 0;
+    }
+
+    .how-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .how-box li {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      position: relative;
+      color: var(--cream);
+    }
+
+    .how-box li::before {
+      content: "■";
+      color: var(--crimson-bright);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 14px;
+    }
+
+    .how-box li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    footer {
+      background: #060e1a;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-legal {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: rgba(136,153,170,0.6);
+      line-height: 1.8;
+    }
+    
+    .footer-legal a { color: rgba(136,153,170,0.8); }
+    .footer-legal a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .hero-sub { padding: 80px 20px 40px; }
+      .article-container { padding: 40px 20px; }
+      .how-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero-sub">
+    <p class="hero-sub-eyebrow">Pillar 08</p>
+    <h1 class="hero-sub-title">Energy &amp; Environment</h1>
+    <div class="back-nav">
+      <a href="index.html" class="btn-ghost">&larr; Back to Blueprint</a>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="article-intro">
+      The Earth does not belong to us; we belong to it.The choices we make today about how we power our civilization, manage our natural resources, and respond to the climate crisis will determine the world our children and grandchildren inherit.This is not a partisan issue; it is a survival issue.The science is clear, the evidence is undeniable, and the window for meaningful action is narrowing.At the same time, the transition to a clean energy economy is not just an environmental imperative: it is one of the greatest economic opportunities in American history, offering the potential for millions of good-paying domestic jobs, reduced energy costs, enhanced national security through energy independence, and American leadership in the industries that will define the next century.We can protect our planet and grow our economy. These goals are not in conflict; they are inseparable.</div>
+
+    <h2>Climate Change & Environmental Policy</h2>
+    <p>The scientific consensus on climate change is overwhelming, unambiguous, and has been repeatedly confirmed by independent researchers across every relevant discipline.Human activity, primarily the burning of fossil fuels, is driving unprecedented changes in the Earth's climate with consequences that are already being felt in the form of more frequent and severe weather events, rising sea levels, prolonged droughts, and ecosystem collapse.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Reaffirm and strengthen</strong> America's commitment to the Paris Climate Agreement, working with international partners to raise ambition and ensure that global temperature increases are limited to the levels necessary to avoid the most catastrophic consequences of climate change.</li>
+        <li><strong>Establish legally binding</strong> national carbon reduction targets with regular review and accountability mechanisms, ensuring that progress is measurable, transparent, and enforceable.</li>
+        <li><strong>Restore and strengthen</strong> the Environmental Protection Agency's authority, funding, and independence, ensuring that it is led by qualified environmental scientists and professionals rather than political appointees with ties to the industries being regulated.</li>
+      </ul>
+    </div>
+
+    <h2>Clean Energy Transition</h2>
+    <p>The transition from fossil fuels to clean, renewable energy is both an environmental necessity and an economic opportunity.Solar, wind, geothermal, hydroelectric, and nuclear energy represent a diverse portfolio of clean energy sources capable of meeting America's energy needs while dramatically reducing carbon emissions.The question is not whether this transition will happen: it is whether America will lead it or follow it.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Dramatically increase</strong> federal investment in solar, offshore wind, onshore wind, geothermal, and hydroelectric energy through direct funding, tax incentives, and public-private partnerships.<strong>Set a national target</strong> for renewable energy as a percentage of the electricity grid with binding milestones and accountability mechanisms.</li>
+        <li><strong>Invest in the research</strong>, development, and deployment of modern nuclear energy technologies, including advanced fission reactors and fusion research, as part of a comprehensive clean energy portfolio.Modern nuclear energy is safe, reliable, and carbon-free, and has a critical role to play in providing baseload power during the transition away from fossil fuels.</li>
+        <li><strong>Invest in modernizing</strong> the American energy grid to accommodate distributed renewable energy generation, improve resilience against both physical and cyber attacks, and reduce transmission losses.</li>
+        <li><strong>Establish a responsible, phased transition</strong> away from fossil fuel dependency for energy generation, heating, and industrial use, with support programs for workers and communities whose livelihoods depend on fossil fuel industries.This transition must be just: workers must not bear the cost of an energy transformation that benefits the entire nation.</li>
+        <li><strong>Consumer energy choices shall be guided</strong> by incentives rather than mandates.Tax credits, rebates, and investment in clean energy infrastructure shall make clean choices the economically attractive choice, without forcing consumers into decisions they are not financially prepared to make.</li>
+      </ul>
+    </div>
+
+    <h2>Coal Community Investment & Just Transition</h2>
+    <p>The transition away from coal is not optional; it is already underway, driven by market forces, falling renewable energy costs, and the unavoidable reality of climate change.The question is not whether coal communities will transition but whether they will transition with the support and investment of the federal government or be left to face it alone.The men and women who powered this country for generations through dangerous, physically demanding work in underground mines and processing facilities deserve better than the choice between environmental destruction and economic abandonment.And the communities built around coal deserve investment that respects their history, honors their contribution, and builds a future their children can stay for.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a Coal Community Transition Fund</strong> providing direct federal investment in former and transitioning coal communities for infrastructure modernization, broadband expansion, school renovation, healthcare facility construction, and community development projects that create immediate employment while building long-term economic foundations independent of coal extraction.</li>
+        <li><strong>Establish a Coal Miner Trade Retraining Program</strong> providing fully funded, paid retraining for active and recently displaced coal miners in high-demand trades including solar and wind energy installation and maintenance, electrical systems, HVAC, construction, advanced manufacturing, and mine reclamation.Training programs shall be co-designed with unions, community colleges, and employers to ensure that credentials lead directly to employment, and participants shall receive full income replacement during training.</li>
+        <li><strong>Address the stigma</strong> of transition directly and explicitly. Federal communications about the coal transition shall acknowledge and honor the contribution of coal miners and coal communities to American prosperity and shall frame retraining not as a consolation prize for losing a way of life but as an investment in the next chapter of communities with decades of industrial skill and work ethic to offer the clean energy economy.</li>
+        <li><strong>Accelerate the cleanup</strong> and reclamation of abandoned mine sites under the Surface Mining Control and Reclamation Act, prioritizing communities where legacy contamination poses ongoing public health risks and where reclamation can create immediate construction employment.</li>
+        <li><strong>Repurpose suitable former mine sites</strong> for renewable energy development, advanced manufacturing, or conservation, in partnership with local communities and with priority given to projects that employ former miners.</li>
+      </ul>
+    </div>
+
+    <h2>Emissions & Environmental Standards</h2>
+    <p>Reducing emissions from transportation, industry, and buildings is essential to meeting climate targets and improving public health.Air and water pollution disproportionately affect low-income communities and communities of color, making environmental protection inseparable from the pursuit of economic and racial justice.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish and enforce</strong> progressively stricter vehicle emissions standards, pushing the automotive industry toward cleaner technologies through regulation while incentivizing consumer adoption of clean vehicles through tax credits and rebates.</li>
+        <li><strong>Restore and strengthen</strong> the Clean Air Act and Clean Water Act, reversing rollbacks that have weakened protections for air and water quality across the country.</li>
+        <li><strong>Address environmental justice</strong> by prioritizing enforcement of environmental standards in communities that bear disproportionate pollution burdens, and requiring environmental impact assessments that specifically evaluate impacts on vulnerable communities.</li>
+      </ul>
+    </div>
+
+    <h2>Public Lands & Natural Resources</h2>
+    <p>America's public lands, national parks, forests, wildlife refuges, and wilderness areas, are a national treasure that belongs to all Americans, present and future.They provide irreplaceable ecological services, recreational opportunities, cultural and spiritual value, and the preservation of biodiversity that is essential to the health of our planet.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Strengthen protections</strong> for national parks, monuments, wilderness areas, and wildlife refuges, reversing rollbacks that have opened protected lands to extractive industry.</li>
+        <li><strong>Establish a national biodiversity strategy</strong> that identifies and protects critical ecosystems, wildlife corridors, and endangered species habitats, recognizing that biodiversity loss is a crisis parallel to climate change in its long-term consequences.</li>
+        <li><strong>Protect and restore</strong> America's wetlands, forests, and coastal ecosystems, which provide critical carbon sequestration, flood protection, and biodiversity services.</li>
+      </ul>
+    </div>
+
+    <h2>PFAS, Microplastics & Toxic Chemical Regulation</h2>
+    <p>Per- and polyfluoroalkyl substances, known as PFAS or forever chemicals, are a class of more than 12,000 synthetic compounds that do not break down in the environment or the human body.They are present in the drinking water of an estimated 200 million Americans, in the blood of virtually every American tested, and in environments ranging from Arctic ice to the deepest ocean trenches.Exposure is associated with cancer, thyroid disease, immune system disruption, reproductive harm, and developmental disorders in children.They were used for decades in firefighting foam, non-stick cookware, food packaging, and hundreds of industrial applications, often with the full knowledge of manufacturers who suppressed evidence of their harm.</p>
+    <p>Microplastics, fragments of plastic smaller than five millimeters produced by the breakdown of larger plastic items, have now been found in human blood, breast milk, placentas, lung tissue, and brain tissue.The health consequences of microplastic accumulation in human tissue are only beginning to be understood, but early evidence suggests inflammatory, hormonal, and potentially carcinogenic effects.The combination of PFAS contamination and microplastic accumulation represents a slow-moving public health crisis of potentially enormous proportions that demands urgent regulatory action.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish federal maximum contaminant levels</strong> for PFAS compounds in drinking water, food packaging, and soil at levels that protect public health based on current scientific evidence, enforced through the Safe Drinking Water Act and the Comprehensive Environmental Response, Compensation, and Liability Act.</li>
+        <li><strong>Require PFAS manufacturers</strong> and users to fund the remediation of PFAS contamination in drinking water supplies, applying the polluter pays principle that underlies the Superfund program.</li>
+        <li><strong>Phase out the use</strong> of PFAS in all non-essential applications within a defined timeline, beginning with food packaging, cookware, and consumer products where safer alternatives exist, and extend the phase-out to industrial applications as alternatives are developed.</li>
+        <li><strong>Establish a federal PFAS research program</strong> to accelerate the development of safer alternatives and to build the scientific evidence base necessary for comprehensive regulation.</li>
+        <li><strong>Establish federal standards requiring the replacement</strong> of plastic food and beverage containers with alternatives made from glass, stainless steel, or certified compostable materials, beginning with single-use plastic food packaging that is most likely to leach microplastics and chemical additives into food and beverages.</li>
+        <li><strong>Invest in the development</strong> and commercial scaling of safe, sustainable packaging alternatives through federal research grants and procurement preferences.</li>
+      </ul>
+    </div>
+
+    <h2>Environmental Justice & Frontline Communities</h2>
+    <p>The communities that bear the greatest burden of environmental pollution in the United States are not randomly distributed.They are disproportionately low-income, disproportionately communities of color, and disproportionately located in the South and in rural areas.Hazardous waste facilities, industrial plants, highways, and other pollution sources are systematically sited in communities with the least political power to resist them, producing concentrated environmental health burdens that compound the other health disparities these communities already face.The children of Flint, Michigan, who were poisoned by lead in their drinking water, are one of the most visible examples of a pattern that is replicated in hundreds of communities across the country with far less visibility.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish environmental justice as a legally enforceable standard</strong> in all federal environmental permitting decisions, requiring that environmental impact assessments include cumulative burden analysis that accounts for existing pollution loads in affected communities and that no new pollution source may be sited in a community already bearing disproportionate environmental burden without explicit findings that no less burdensome alternative exists.</li>
+        <li><strong>Provide communities with legal standing</strong> and resources to challenge permitting decisions on environmental justice grounds.</li>
+        <li><strong>Establish a federal Environmental Justice Remediation Fund</strong> that prioritizes cleanup of contaminated sites in frontline communities, with community involvement in cleanup planning and post-remediation land use decisions.</li>
+        <li><strong>Invest in lead pipe replacement</strong>, drinking water infrastructure upgrades, and air quality monitoring in communities with documented exposure to lead, particulate matter, and other priority pollutants at levels that cause measurable health harm.</li>
+      </ul>
+    </div>
+
+    <h2>Sustainable Agriculture & Food Systems</h2>
+    <p>American agriculture is both a significant contributor to greenhouse gas emissions and one of the sectors most vulnerable to the consequences of climate change.Transforming our food system toward greater sustainability is essential both for meeting climate goals and for ensuring the long-term resilience of America's food supply.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Invest in research and adoption</strong> of sustainable agricultural practices that reduce emissions, improve soil health, conserve water, and maintain productivity, including regenerative agriculture, precision farming, and reduced tillage practices.</li>
+        <li><strong>Reform federal agricultural subsidies</strong> to support sustainable farming practices and diversified food production rather than the monoculture commodity crops that currently dominate federal support.</li>
+        <li><strong>Address the environmental impact</strong> of industrial animal agriculture through emissions standards, waste management requirements, and incentives for more sustainable protein production.</li>
+      </ul>
+    </div>
+
+    <h2>Animal Welfare & Factory Farming Reform</h2>
+    <p>The industrial factory farming system that produces the majority of America's meat, dairy, and eggs subjects billions of animals to conditions of severe and unnecessary suffering, while simultaneously generating enormous environmental harm, public health risks, and the conditions that drive antibiotic resistance.Reforming this system is simultaneously an animal welfare imperative, an environmental imperative, and a public health imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish federal minimum animal welfare standards</strong> for all agricultural operations, ensuring that animals raised for food are provided with conditions that meet their basic behavioral and physiological needs.</li>
+        <li><strong>Phase out the most egregious</strong> factory farming practices, including gestation crates for pigs, battery cages for laying hens, and veal crates for calves, that cause severe suffering and have already been banned in numerous states and countries.</li>
+        <li><strong>Address the public health threat</strong> posed by the routine use of antibiotics in industrial animal agriculture through strict federal regulation limiting antibiotic use to the treatment of diagnosed illness rather than routine growth promotion in overcrowded conditions.</li>
+      </ul>
+    </div>
+
+    <h2>Domestic Climate Migration & Community Resilience</h2>
+    <p>Climate change is already driving significant internal migration within the United States, as sea level rise, increasing wildfire risk, extreme heat, and water scarcity make some communities increasingly uninhabitable.Conservative estimates suggest that tens of millions of Americans will face climate-driven displacement within the next several decades.The federal government has no comprehensive framework for managing this displacement, protecting the communities most at risk, or planning the managed retreat that will be necessary in the most vulnerable locations.Addressing this challenge requires both mitigation, reducing the emissions that drive climate change, and adaptation, preparing communities to survive and in some cases relocate as conditions change.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a National Climate Resilience and Managed Retreat Fund</strong> that provides resources for communities to assess their climate vulnerabilities, invest in resilience infrastructure where feasible, and plan and execute managed retreat where continued habitation becomes untenable.</li>
+        <li><strong>Ensure that managed retreat programs</strong> are voluntary, fairly compensated, and designed to keep communities together rather than dispersing them, recognizing that displacement that destroys community cohesion compounds rather than solves the harm of climate disruption.</li>
+      </ul>
+    </div>
+
+    <h2>International Climate Commitments & the Paris Agreement</h2>
+    <p>The Paris Agreement on climate change, signed by 196 nations, represents the most comprehensive international effort in history to address the existential threat of climate change through coordinated national action.The United States has withdrawn from and rejoined the agreement in alternating administrations, undermining American credibility as a reliable partner in global climate action and creating enormous instability in the international framework.Climate change does not respect election cycles. The emission reductions required to avoid the worst outcomes must be pursued continuously and predictably over decades.An American climate commitment that is reversed with each change of administration is functionally no commitment at all.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Submit the Paris Agreement</strong> to the Senate for ratification as a treaty rather than leaving it as an executive agreement, making withdrawal subject to the same two-thirds Senate vote required to ratify.</li>
+        <li><strong>Establish domestic climate legislation</strong> that creates binding, enforceable emission reduction targets, insulating American climate policy from complete reversal by executive action alone and providing the business and investment community with the long-term regulatory certainty necessary to drive the clean energy transition.</li>
+      </ul>
+    </div>
+
+    <h2>Western Water Rights & the Coming Scarcity Crisis</h2>
+    <p>The Colorado River, which supplies water to 40 million Americans across seven states and two Mexican states, is running out of water.Lake Mead and Lake Powell, the two largest reservoirs in the United States, have declined to historic lows.The 1922 Colorado River Compact was negotiated based on flow estimates that subsequent science has shown were significantly overestimated, and climate change is further reducing flows.The Ogallala Aquifer, which underlies eight Great Plains states and provides water for roughly 30 percent of all groundwater used for irrigation in the United States, is being depleted far faster than it is replenished.The coming water scarcity crisis threatens agriculture, urban water supplies, and entire regional economies and requires federal engagement at a scale that states and localities cannot achieve alone.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a federal Western Water Compact Modernization Initiative</strong> that convenes the seven Colorado River Compact states, tribal nations with water rights, Mexico, and federal agencies to negotiate a updated framework for Colorado River water allocation based on actual sustainable supply rather than the overestimated historical flows on which the 1922 compact was based.</li>
+        <li><strong>Provide federal resources</strong> for water efficiency infrastructure, recycled water systems, and demand reduction programs that reduce the gap between current usage and sustainable supply.</li>
+      </ul>
+    </div>
+
+    <h2>Water Security</h2>
+    <p>Fresh water is among the most precious and most threatened natural resources on Earth.Climate change is intensifying droughts, altering precipitation patterns, and threatening the water supplies that American communities, agriculture, and industry depend on.Ensuring water security for all Americans is both an environmental and a national security imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Invest in water infrastructure modernization</strong>, including the replacement of lead pipes, the rehabilitation of aging water treatment facilities, and the modernization of irrigation systems that waste enormous quantities of fresh water.</li>
+        <li><strong>Ensure that all Americans have access</strong> to clean, safe drinking water, addressing the persistent failures of water infrastructure in low-income communities and communities of color that have been documented from Flint, Michigan to Native American reservations across the West.</li>
+      </ul>
+    </div>
+
+    <h2>Nuclear Waste: America's Unresolved Crisis</h2>
+    <p>The United States has accumulated approximately 90,000 metric tons of high-level nuclear waste at commercial power plants and federal facilities across the country, stored in temporary facilities that were never designed for permanent storage.The Yucca Mountain repository, the only site ever formally evaluated for permanent disposal, was effectively cancelled by political opposition despite billions of dollars of investment and decades of scientific study.The result is a growing inventory of extremely hazardous material with no permanent home, stored at over 100 sites in 35 states, creating ongoing security, environmental, and public health risks that will persist for thousands of years.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Restart the federal nuclear waste repository siting process</strong> with a scientifically rigorous, geologically based evaluation of suitable sites that is insulated from the kind of political interference that terminated the Yucca Mountain project.</li>
+        <li><strong>Establish a Nuclear Waste Management Commission</strong> with independent scientific authority and a dedicated funding mechanism that ensures the repository program cannot be defunded for political reasons.</li>
+        <li><strong>Address the interim storage gap</strong> by investing in the consolidation of nuclear waste into a smaller number of secure, state-of-the-art interim storage facilities while the permanent repository process proceeds.</li>
+      </ul>
+    </div>
+
+    <h2>Environmental Cleanup & Superfund Reform</h2>
+    <p>Decades of industrial activity have left a toxic legacy across the American landscape, in the form of Superfund sites, abandoned mines, contaminated waterways, and polluted communities that bear the concentrated health consequences of a century of under-regulated industrial pollution.The communities most affected by environmental contamination are disproportionately low-income and communities of color, a pattern of environmental injustice that demands urgent remediation.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Dramatically increase funding</strong> for the Superfund program, addressing the massive backlog of contaminated sites awaiting cleanup and accelerating the remediation of sites that pose the greatest risks to human health and the environment.</li>
+        <li><strong>Strengthen the polluter pays principle</strong> through enhanced enforcement, expanded liability provisions, and the elimination of bankruptcy and corporate restructuring strategies that allow polluters to escape cleanup obligations.</li>
+        <li><strong>Prioritize environmental cleanup</strong> in communities that have borne disproportionate pollution burdens, establishing an environmental justice screening framework that directs remediation resources toward communities with the greatest need and the most severe health impacts.</li>
+      </ul>
+    </div>
+
+    <h2>Plastic Pollution & Waste Management</h2>
+    <p>Plastic pollution has become one of the most pervasive environmental challenges of the modern era, contaminating oceans, waterways, soils, and even the human body with microplastics whose long-term health consequences are only beginning to be understood.The United States is one of the world's largest generators of plastic waste, and the current system of voluntary corporate commitments and inadequate recycling infrastructure has demonstrably failed to address the problem.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish federal regulations phasing out</strong> the production and sale of unnecessary single-use plastic products for which viable, affordable alternatives exist, following the model of successful bans already implemented in numerous states and countries.</li>
+        <li><strong>Establish extended producer responsibility requirements</strong> for plastic packaging, requiring manufacturers to take financial responsibility for the end-of-life management of the plastic packaging they produce, creating powerful economic incentives for the reduction of plastic packaging.</li>
+        <li><strong>Invest in the modernization</strong> and expansion of America's recycling infrastructure, addressing the chronic underfunding and fragmentation of recycling systems that has resulted in low recycling rates and contamination of recycling streams.</li>
+      </ul>
+    </div>
+
+    <h2>Ocean Health & Marine Protection</h2>
+    <p>America's oceans, stretching across three coastlines and encompassing some of the most biologically diverse marine ecosystems on Earth, regulate the global climate, generate a significant portion of the oxygen we breathe, support hundreds of billions of dollars of economic activity, and sustain the livelihoods and cultural identities of coastal communities across the country.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a national ocean health strategy</strong> with legally binding targets for the protection and restoration of marine ecosystems, including the expansion of marine protected areas to cover at least 30 percent of American ocean waters by 2030.</li>
+        <li><strong>Strengthen federal fisheries management</strong> to ensure that all American fisheries are managed sustainably, eliminating overfishing, rebuilding depleted fish stocks, and ensuring that the fishing industry has a viable future.</li>
+        <li><strong>Address the threat of ocean acidification</strong> driven by the absorption of atmospheric carbon dioxide through both domestic emissions reduction and international climate diplomacy, recognizing that ocean acidification threatens the entire marine food web and the coastal ecosystems that protect American shorelines.</li>
+      </ul>
+    </div>
+
+    <h2>Innovative Waste-to-Resource Technologies</h2>
+    <p>One of the most powerful shifts in environmental thinking is the recognition that waste is not an endpoint: it is a misplaced resource.Every ton of glass, rubber, plastic, construction debris, or food waste that ends up in a landfill or polluting a waterway represents both an environmental failure and a missed economic opportunity.The technology to transform these waste streams into valuable resources already exists and is being developed and refined by innovative companies and researchers across the country.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Invest in the development and deployment of glass pulverizing technology</strong> that grinds recycled glass into fine, sand-like particles suitable for beach restoration, coastal erosion mitigation, and other beneficial uses.America's beaches are disappearing at an accelerating rate due to rising sea levels, increased storm intensity, and coastal development.Glass-to-sand technology addresses both problems simultaneously, turning a recycling liability into a coastal restoration asset.</li>
+        <li><strong>Invest in the development and deployment of technologies that transform waste tires</strong> into valuable materials including crumb rubber for road surfaces, playground equipment, athletic tracks, and construction materials.<strong>Establish federal procurement preferences</strong> for products incorporating recycled tire rubber.</li>
+        <li><strong>Establish federal standards and incentives</strong> for the recycling and reuse of construction and demolition waste, including concrete, steel, wood, drywall, and asphalt, which constitutes one of the largest waste streams in the country.<strong>Require that federally funded construction projects</strong> meet minimum recycled content and construction waste diversion standards.</li>
+        <li><strong>Invest in technologies and infrastructure</strong> that convert food waste into valuable resources including compost, biogas, and animal feed.<strong>Establish federal food waste reduction targets</strong> and invest in the infrastructure necessary to divert food waste from landfills where it generates methane into productive uses.</li>
+        <li><strong>Establish a dedicated federal Waste-to-Resource Innovation Fund</strong> providing grants, loans, and tax incentives for startups, research institutions, and established companies developing innovative waste-to-resource technologies.<strong>Use the enormous purchasing power</strong> of the federal government to create reliable markets for waste-derived materials and products.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-title">Eleven Pillars of Change</div>
+    <div class="footer-legal">
+      Copyright &copy; Jared Spence, 2026. All rights reserved.<br/>
+      Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>.<br/>
+      Contact: <a href="mailto:eleven-pillars-of-change@outlook.com">eleven-pillars-of-change@outlook.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

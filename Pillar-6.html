@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 6: National Security & Peace — Eleven Pillars of Change</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --crimson: #c0392b;
+      --crimson-bright: #e74c3c;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --cream: #f5f0e8;
+      --cream-dim: #e8e0d0;
+      --white: #ffffff;
+      --gray: #8899aa;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Barlow', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    a { 
+      text-decoration: none; 
+    }
+
+    .hero-sub {
+      background: linear-gradient(160deg, #0a1628 0%, #112240 100%);
+      padding: 100px 24px 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .hero-sub-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson-bright);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0 0 24px 0;
+    }
+
+    .back-nav {
+      margin-top: 32px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .article-intro {
+      font-size: 22px;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .article-container h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 64px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .article-container p {
+      margin: 0 0 24px 0;
+      color: var(--cream-dim);
+    }
+
+    .how-box {
+      background: rgba(192, 57, 43, 0.04);
+      border-left: 4px solid var(--crimson);
+      padding: 32px;
+      margin: 32px 0 56px;
+    }
+
+    .how-box h3 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 20px 0;
+    }
+
+    .how-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .how-box li {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      position: relative;
+      color: var(--cream);
+    }
+
+    .how-box li::before {
+      content: "■";
+      color: var(--crimson-bright);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 14px;
+    }
+
+    .how-box li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    footer {
+      background: #060e1a;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-legal {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: rgba(136,153,170,0.6);
+      line-height: 1.8;
+    }
+    
+    .footer-legal a { color: rgba(136,153,170,0.8); }
+    .footer-legal a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .hero-sub { padding: 80px 20px 40px; }
+      .article-container { padding: 40px 20px; }
+      .how-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero-sub">
+    <p class="hero-sub-eyebrow">Pillar 06</p>
+    <h1 class="hero-sub-title">National Security &amp; Peace</h1>
+    <div class="back-nav">
+      <a href="index.html" class="btn-ghost">&larr; Back to Blueprint</a>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="article-intro">
+      America is not a nation of war. We are a nation of ideals: of liberty, justice, and the belief that human dignity is worth defending. Our strength is not measured solely by the size of our military budget or the reach of our weapons systems, but by the integrity of our alliances, the wisdom of our diplomacy, and the wellbeing of the men and women who volunteer to defend us. A truly secure America is one that leads with moral authority, invests in the human beings who serve, reforms the systems that waste and defraud, and pursues peace not as a weakness but as the highest expression of national strength. We must be prepared to defend ourselves and our allies with overwhelming capability: but that capability must always be in service of peace, not profit.
+    </div>
+
+    <h2>Department of Defense Reform</h2>
+    <p>The Department of Defense represents the largest single discretionary expenditure in the federal budget. Yet decades of unchecked contractor relationships, cost overruns, and systemic waste have meant that enormous sums of public money have been spent with insufficient accountability or return. Reform is not about weakening our defense; it is about ensuring that every dollar spent on defense actually makes America safer.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Conduct a comprehensive audit</strong> of all DoD contracts and contractors, with particular scrutiny of those with consistent cost overruns, performance failures, or inability to provide adequate justification for expenditures. Contracts that cannot demonstrate legitimate value shall be terminated.</li>
+        <li><strong>Establish rigorous cost controls</strong> and competitive bidding requirements for all DoD procurement, with mandatory penalties for contractors who exceed agreed budgets without sufficient justification. Reform supply chain contracting to ensure that the DoD pays fair market prices for equipment, supplies, and support services.</li>
+        <li><strong>Establish an independent DoD Inspector General</strong> with enhanced authority, resources, and independence to investigate fraud, waste, and abuse within the defense establishment, with findings reported directly to Congress and made publicly available.</li>
+      </ul>
+    </div>
+
+    <h2>Service Member Wellbeing</h2>
+    <p>The men and women who serve in the United States military make extraordinary sacrifices in defense of their nation. They deserve not just our gratitude but our genuine, sustained investment in their physical health, mental wellbeing, professional development, and quality of life. A military that takes care of its people is a military that retains its best people and projects strength through excellence.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a standardized initial boot camp structure</strong> across all branches of the military, with a rigorous and evidence-based focus on nutrition education, physical fitness training, and foundational warrior skills. The physical and discipline standards of the Marine Corps boot camp model shall serve as the benchmark, with branch-specific follow-on training succeeding a common foundation.</li>
+        <li><strong>Reform military nutrition programs</strong> to ensure that service members have access to high quality, nutritious food throughout their service. Integrate nutrition education into boot camp and ongoing training, equipping service members with the knowledge to maintain their health throughout their careers and lives.</li>
+        <li><strong>Dramatically expand access to mental health services</strong> for active duty service members and their families, eliminating the stigma around seeking help and ensuring that mental health care is as available and normalized as physical health care. Address the veteran suicide crisis as a national emergency, with dedicated funding, research, and intervention programs.</li>
+        <li><strong>Invest in military housing</strong>, family support programs, childcare, and education benefits to ensure that service members and their families are not financially penalized for their service.</li>
+        <li><strong>Ensure that diversity, equity, and inclusion programs</strong> are grounded in merit-based advancement that addresses structural barriers and implicit biases.</li>
+        <li><strong>Reform the military justice system</strong> to ensure that service members have access to independent legal representation, that sexual assault and harassment cases are prosecuted effectively and without command interference, and that accountability applies equally regardless of rank.</li>
+      </ul>
+    </div>
+
+    <h2>Veterans Affairs Reform</h2>
+    <p>Those who have served deserve a government that honors its commitments to them, not just in rhetoric but in action. The Veterans Affairs system has been chronically underfunded, mismanaged, and allowed to fail the very people it exists to serve. This is a national disgrace that demands urgent and sustained reform.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Conduct a comprehensive audit of the VA system</strong> to identify systemic failures, backlogs, and areas of chronic underperformance, with a commitment to transparent public reporting of findings and progress.</li>
+        <li><strong>Dramatically reduce the VA claims backlog</strong> through increased staffing, modernized processing systems, and streamlined claims procedures.</li>
+        <li><strong>Expand VA mental health services</strong> with a specific focus on PTSD, traumatic brain injury, military sexual trauma, and veteran suicide prevention. Mental health care shall be available to all veterans regardless of discharge status.</li>
+        <li><strong>Reform the discharge review process</strong> to ensure that veterans with less than honorable discharges, many of whom were discharged for issues related to undiagnosed mental health conditions or trauma, have a clear, accessible pathway to discharge upgrade and access to earned benefits.</li>
+        <li><strong>Address veteran homelessness</strong> as a national priority, with targeted investment in housing, wraparound support services, and the coordination of federal, state, and local resources necessary to end veteran homelessness.</li>
+        <li><strong>Establish robust transition assistance programs</strong> that prepare separating service members for civilian life, including career counseling, education benefits navigation, mental health screening, and financial planning support.</li>
+      </ul>
+    </div>
+
+    <h2>Defense Through Deterrence</h2>
+    <p>America's military posture must be oriented toward the defense of the homeland and our allies through strength, readiness, and the credible deterrence of aggression: not toward military adventurism, regime change, or the projection of power in service of corporate or geopolitical interests that do not align with American values or the wellbeing of the American people.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Maintain robust investment in the capabilities</strong> necessary to deter and if necessary defeat any adversary that threatens the United States or its allies, including conventional forces, nuclear deterrence, cyber capabilities, and space-based assets.</li>
+        <li><strong>Invest in research and development</strong> of next-generation defense technologies, including advanced cyber defense, directed energy weapons, autonomous systems, and space-based capabilities, ensuring that America maintains a decisive technological edge over potential adversaries.</li>
+        <li><strong>Reform the Authorization for Use of Military Force framework</strong> to ensure that military action is always subject to meaningful congressional oversight and that the executive branch cannot unilaterally commit American forces to sustained combat operations without congressional approval.</li>
+        <li><strong>Establish clear, principled criteria</strong> for the use of military force that prioritize diplomatic solutions and require exhaustion of non-military options.</li>
+      </ul>
+    </div>
+
+    <h2>Nuclear Arsenal & Nonproliferation</h2>
+    <p>The existence of nuclear weapons represents the single greatest existential threat to human civilization. The United States, as one of the world's largest nuclear powers, has a special responsibility to lead the world toward meaningful arms control, nonproliferation, and ultimately disarmament. This is not weakness; it is the highest expression of strategic seriousness.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Renew and expand the New START treaty framework</strong> or successor agreements with Russia, maintaining verifiable limits on deployed nuclear warheads and delivery systems while pursuing negotiations toward deeper mutual reductions.</li>
+        <li><strong>Pursue a no-first-use nuclear policy and lead international efforts</strong> to prevent nuclear proliferation, using diplomatic engagement, security guarantees, and targeted sanctions to discourage states from pursuing nuclear weapons programs.</li>
+      </ul>
+    </div>
+
+    <h2>Pandemic Preparedness & Bioterrorism Defense</h2>
+    <p>COVID-19 demonstrated with devastating clarity that America was unprepared for a major pandemic despite years of expert warnings. More than one million Americans died, in significant part because the preparedness infrastructure that had been built over decades was allowed to atrophy through chronic underfunding and political disregard. Pandemic preparedness is not a public health issue alone; it is a national security imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Rebuild and permanently fund the White House pandemic preparedness office</strong> and the National Security Council global health security directorate, ensuring that pandemic preparedness is treated as a permanent national security priority.</li>
+        <li><strong>Invest in domestic vaccine manufacturing capacity</strong>, strategic reserves of personal protective equipment, and the public health infrastructure necessary to detect, respond to, and contain emerging infectious disease threats.</li>
+        <li><strong>Strengthen international health surveillance</strong> and early warning systems, investing in the WHO and bilateral partnerships to ensure that the next pandemic is detected and contained before it becomes a global catastrophe.</li>
+      </ul>
+    </div>
+
+    <h2>Foreign Policy & Global Diplomacy</h2>
+    <p>America's strength in the world has never rested solely on military power. It has rested on the credibility of our values, the reliability of our commitments, and our ability to lead coalitions of nations toward shared goals. Decades of military adventurism, unilateral action, and the erosion of diplomatic institutions have weakened America's standing in the world and left a vacuum that adversaries have been eager to fill. Restoring American leadership means restoring American credibility: as a nation that keeps its commitments, respects international law, and leads by example.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Reaffirm America's commitment to its treaty alliances</strong>, including NATO and bilateral defense agreements in the Indo-Pacific, making clear that American security guarantees are reliable and not subject to the whims of individual administrations. Allies must be able to trust American commitments across administrations and political cycles.</li>
+        <li><strong>Reverse the hollowing out of the State Department</strong> and the Foreign Service through sustained investment in diplomatic personnel, training, and infrastructure. Diplomacy is cheaper than war and more effective than sanctions in most circumstances; it deserves commensurate investment.</li>
+        <li><strong>Reengage fully with international institutions</strong> including the United Nations, the World Health Organization, the World Trade Organization, and the Paris Climate Agreement, recognizing that global challenges require global cooperation and that American withdrawal from these institutions cedes influence to adversaries.</li>
+        <li><strong>Establish human rights as a genuine cornerstone</strong> of American foreign policy, not just a rhetorical talking point. Apply consistent standards to all nations, allies and adversaries alike, and use diplomatic, economic, and where appropriate legal tools to advance human rights globally.</li>
+        <li><strong>Maintain firm, principled stances toward adversarial nations</strong> including Russia, China, North Korea, and Iran, using a full spectrum of diplomatic, economic, and military tools to deter aggression, protect American interests, and defend democratic values, while always leaving open credible pathways to diplomatic resolution.</li>
+        <li><strong>Reaffirm America's commitment to foreign aid</strong> as a tool of both humanitarian responsibility and strategic national interest. A world with less poverty, disease, and instability is a world that is safer for America. Foreign aid is not charity; it is investment in global stability.</li>
+      </ul>
+    </div>
+
+    <h2>State Department Independence & Diplomatic Merit</h2>
+    <p>The United States Department of State is the primary institution through which American diplomacy is conducted and American values are projected abroad. Its effectiveness depends on a professional, experienced Foreign Service workforce whose expertise is built over careers spanning decades. The systematic hollowing out of the State Department through hiring freezes, forced departures, and the sidelining of career diplomats in favor of political loyalists has degraded American diplomatic capacity at a moment when that capacity is more needed than at any point since the Cold War. Rebuilding it is a national security imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish a statutory requirement</strong> that a minimum of seventy percent of all U.S. ambassador appointments be drawn from the career Foreign Service, with any political appointee ambassador required to demonstrate relevant diplomatic, regional, or substantive expertise evaluated by an independent panel before Senate confirmation. The practice of awarding ambassadorships to major campaign donors with no relevant expertise has damaged American credibility and interests in countries where experienced diplomatic representation is most critical.</li>
+      </ul>
+      <p><em>A note on constitutional limits: the appointment of ambassadors is an express constitutional power of the president, subject to Senate confirmation. Congress may condition foreign affairs funding and establish qualifications for Senate confirmation, but a statutory requirement mandating the percentage of career versus political appointments would face separation of powers challenge. This proposal is therefore best implemented through a combination of Senate confirmation standards, which are clearly within congressional authority, and State Department internal policy, rather than through a mandatory statutory quota. The Senate Foreign Relations Committee should establish and enforce a practice of requiring demonstrated expertise as a condition of confirmation for any ambassador nominee to a post designated as high-priority.</em></p>
+      <ul>
+        <li><strong>Restore and substantially increase State Department funding</strong> and staffing, reversing years of budget cuts and hiring freezes that have left critical diplomatic posts understaffed and have forced the department to rely on military channels for functions that should be conducted through civilian diplomacy. The ratio of defense spending to diplomatic spending in the United States is among the most imbalanced of any major democracy and reflects a fundamental misunderstanding of how American interests are best served.</li>
+        <li><strong>Establish a Foreign Service Independence Protection Act</strong> that codifies protections for career diplomats against politically motivated reassignments, forced departures, and retaliation for providing honest assessments that conflict with administration policy preferences. The integrity of diplomatic reporting depends on diplomats being able to tell policymakers what they need to hear rather than what they want to hear.</li>
+      </ul>
+    </div>
+
+    <h2>USAID, International Development & American Soft Power</h2>
+    <p>The United States Agency for International Development was, for more than six decades, the primary instrument of American development assistance and humanitarian aid abroad. USAID funded health programs that saved tens of millions of lives, supported democratic institutions in fragile states, provided famine relief, built schools, trained journalists, and advanced American interests through the tools of diplomacy and development rather than military force. Its effective dismantling represents one of the most consequential and least understood foreign policy decisions of the modern era, with damage that extends far beyond the immediate humanitarian consequences to the long-term credibility and influence of the United States globally.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Restore USAID as a fully funded</strong>, fully staffed, and fully independent federal agency with a permanent statutory basis that cannot be gutted through executive action alone.</li>
+        <li><strong>Require congressional authorization for any reduction</strong> in USAID staffing or programming above a defined threshold, establishing that the dismantling of a major foreign policy instrument requires legislative consent rather than executive fiat.</li>
+        <li><strong>Rebuild USAID's workforce</strong> through a comprehensive hiring and retention program, prioritizing the re-engagement of experienced foreign service officers and development professionals who were dismissed or driven out, and investing in the training pipeline necessary to restore institutional knowledge and capacity. Foreign service expertise takes years to build and cannot be reconstituted overnight.</li>
+        <li><strong>Reestablish and expand American international development programming</strong> as a core instrument of national security strategy, recognizing that development assistance is among the most cost-effective tools available for preventing the conditions that breed terrorism, instability, and mass migration.</li>
+        <li><strong>Restore funding for the President's Emergency Plan</strong> for AIDS Relief (PEPFAR), the President's Malaria Initiative, and other flagship health programs whose interruption has already resulted in preventable deaths.</li>
+        <li><strong>Restore the Millennium Challenge Corporation</strong> as an independent, results-driven development finance institution that provides assistance to developing nations conditioned on demonstrated commitments to democratic governance, economic freedom, and investment in their own people.</li>
+        <li><strong>Expand the Peace Corps</strong> back to full operational capacity, recognizing its irreplaceable role in building people-to-people connections that advance American interests and values in communities around the world.</li>
+      </ul>
+    </div>
+
+    <h2>Private Military Contractors & Accountability</h2>
+    <p>The United States government spent an estimated $370 billion on private military and security contractors in the two decades of war in Iraq and Afghanistan. These contractors, whose employees operated alongside and sometimes instead of American service members, existed in a legal gray zone: not subject to the Uniform Code of Military Justice, rarely subject to meaningful prosecution under domestic law, and often operating in environments where host nation law was unenforceable. The documented abuses committed by private military contractors, including the Nisour Square massacre in Iraq and the systematic abuse of detainees at Abu Ghraib involving contractor personnel, represent a accountability gap that has never been fully closed.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish clear statutory jurisdiction for the prosecution</strong> of private military and security contractors for crimes committed in the course of their government-contracted work abroad, closing the legal ambiguity that has allowed documented abuses to go unprosecuted.</li>
+        <li><strong>Require that all private military and security contractors</strong> operating under U.S. government contracts comply with the same rules of engagement and use-of-force standards as U.S. military personnel, with equivalent accountability mechanisms for violations.</li>
+      </ul>
+    </div>
+
+    <h2>International Alliances & the Postwar Order</h2>
+    <p>The international alliance system built by the United States after World War II, including NATO, the network of bilateral security agreements in the Pacific, the World Trade Organization, and the multilateral institutions of the United Nations system, has been the foundation of the longest period of great-power peace in recorded history. These alliances are not charity. They are the architecture of American security and American prosperity, maintained at relatively modest cost compared to the alternative of a world in which the United States confronts threats alone. The deliberate undermining of these alliances through unreliability, public humiliation of allies, and the suggestion that American security commitments are conditional on financial arrangements, is not a negotiating strategy. It is the destruction of eighty years of carefully constructed security infrastructure that cannot be quickly rebuilt once dismantled.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Pass legislation affirming the United States' commitment to its NATO obligations</strong> under Article 5 of the North Atlantic Treaty and prohibiting any president from withdrawing from NATO without Senate approval by a two-thirds vote.</li>
+        <li><strong>Restore and expand American participation in multilateral institutions</strong> and agreements including the World Health Organization, the Paris Climate Agreement, and other international frameworks from which the United States has withdrawn or threatened to withdraw for political reasons, recognizing that American leadership in multilateral institutions serves American interests.</li>
+        <li><strong>Restore American foreign assistance and development programming</strong> to its full scope and reestablish the credibility of American security guarantees by fulfilling existing commitments to partners including Ukraine, Taiwan, and other nations that have structured their security and foreign policy around the reliability of American partnership. The cost of abandoning allies is not merely financial; it is the destruction of the credibility on which all future American diplomacy depends.</li>
+      </ul>
+    </div>
+
+    <h2>Domestic Terrorism & Extremism</h2>
+    <p>Domestic terrorism, particularly from white nationalist, militia, and anti-government extremist movements, represents one of the most serious and growing threats to American safety and democratic institutions. The January 6th attack on the United States Capitol was a stark demonstration of what domestic extremism, left unchecked, can do to the foundations of democracy itself.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Designate domestic terrorism as a federal crime</strong> with penalties commensurate with the threat it poses to democratic institutions and public safety.</li>
+        <li><strong>Invest in counter-extremism programs</strong> that address the radicalization pipeline, working with communities, technology platforms, and mental health professionals to identify and intervene before individuals commit acts of violence.</li>
+      </ul>
+    </div>
+
+    <h2>White Nationalist Extremism & Domestic Terrorism</h2>
+    <p>The Federal Bureau of Investigation has consistently identified racially or ethnically motivated violent extremism, and white nationalist extremism in particular, as the most lethal form of domestic terrorism in the United States. White nationalist and white supremacist groups were responsible for the majority of domestic terrorism fatalities in the years between 2015 and 2022. Yet federal law enforcement's resources for combating domestic terrorism are a fraction of those devoted to international terrorism, and the absence of a dedicated domestic terrorism statute has created legal gaps that allow violent extremists to organize, fundraise, and recruit with fewer legal constraints than foreign terrorist organizations face. Naming this threat accurately and resourcing the response proportionally is not a political act. It is a public safety imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Pass a domestic terrorism statute</strong> that establishes federal criminal jurisdiction over acts of violence committed with the intent to intimidate or coerce civilian populations based on race, ethnicity, religion, or national origin, providing law enforcement with legal tools equivalent to those available for combating international terrorism.</li>
+        <li><strong>Establish dedicated FBI and DOJ units</strong> for investigating and prosecuting domestic terrorism with resources proportional to the documented threat level.</li>
+        <li><strong>Establish a federal program for deradicalization</strong> and counter-extremism intervention that provides resources for communities, schools, families, and mental health providers to identify individuals at risk of radicalization and intervene before they commit violence.</li>
+        <li><strong>Invest in research on the pathways</strong> to violent extremism and the evidence-based interventions that are most effective at interrupting those pathways, drawing on the successful models developed in Europe and adapted for the American context.</li>
+      </ul>
+    </div>
+
+    <h2>Department of Homeland Security Reform</h2>
+    <p>The Department of Homeland Security was established in the wake of September 11, 2001 with a clear mandate: to protect the American homeland from terrorism and catastrophic threats. In the years since, it has grown into a sprawling bureaucracy encompassing disaster response, immigration enforcement, airport security, and cybersecurity. Reform is not optional; it is a national security imperative.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Restore and increase FEMA funding</strong> to levels commensurate with the growing frequency and severity of natural disasters driven by climate change.</li>
+        <li><strong>Rebuild FEMA's staffing</strong> and operational capacity. Ensure that FEMA leadership is comprised of qualified emergency management professionals, not political appointees without relevant experience.</li>
+        <li><strong>Increase TSA officer compensation</strong> to competitive levels that reduce turnover.</li>
+        <li><strong>Strengthen TSA training programs</strong> to ensure all officers receive comprehensive, consistently updated instruction in security protocols, threat identification, and passenger rights.</li>
+        <li><strong>Establish clear standards for ICE and CBP conduct</strong>, requiring that all agents be fully identified with visible badge numbers at all times during enforcement operations.</li>
+        <li><strong>Prohibit the use of masks or face coverings</strong> that obscure agent identity during law enforcement operations against civilians.</li>
+        <li><strong>Establish robust accountability systems</strong> including independent oversight, body camera requirements, and mandatory reporting of use of force incidents.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-title">Eleven Pillars of Change</div>
+    <div class="footer-legal">
+      Copyright &copy; Jared Spence, 2026. All rights reserved.<br/>
+      Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>.<br/>
+      Contact: <a href="mailto:eleven-pillars-of-change@outlook.com">eleven-pillars-of-change@outlook.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

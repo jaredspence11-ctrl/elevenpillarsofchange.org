@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 9: Justice & Reconciliation — Eleven Pillars of Change</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --crimson: #c0392b;
+      --crimson-bright: #e74c3c;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --cream: #f5f0e8;
+      --cream-dim: #e8e0d0;
+      --white: #ffffff;
+      --gray: #8899aa;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Barlow', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    a { 
+      text-decoration: none; 
+    }
+
+    .hero-sub {
+      background: linear-gradient(160deg, #0a1628 0%, #112240 100%);
+      padding: 100px 24px 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .hero-sub-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson-bright);
+      margin-bottom: 16px;
+    }
+
+    .hero-sub-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0 0 24px 0;
+    }
+
+    .back-nav {
+      margin-top: 32px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .article-intro {
+      font-size: 22px;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .article-container h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 64px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .article-container p {
+      margin: 0 0 24px 0;
+      color: var(--cream-dim);
+    }
+
+    .how-box {
+      background: rgba(192, 57, 43, 0.04);
+      border-left: 4px solid var(--crimson);
+      padding: 32px;
+      margin: 32px 0 56px;
+    }
+
+    .how-box h3 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 20px 0;
+    }
+
+    .how-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .how-box li {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      position: relative;
+      color: var(--cream);
+    }
+
+    .how-box li::before {
+      content: "■";
+      color: var(--crimson-bright);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 14px;
+    }
+
+    .how-box li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    footer {
+      background: #060e1a;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-legal {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: rgba(136,153,170,0.6);
+      line-height: 1.8;
+    }
+    
+    .footer-legal a { color: rgba(136,153,170,0.8); }
+    .footer-legal a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .hero-sub { padding: 80px 20px 40px; }
+      .article-container { padding: 40px 20px; }
+      .how-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero-sub">
+    <p class="hero-sub-eyebrow">Pillar 09</p>
+    <h1 class="hero-sub-title">Justice &amp; Reconciliation</h1>
+    <div class="back-nav">
+      <a href="index.html" class="btn-ghost">&larr; Back to Blueprint</a>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <div class="article-intro">
+      A nation that does not honestly reckon with its past cannot build an equitable future. America's history is one of extraordinary achievement and profound injustice: of ideals that inspired the world and systems that betrayed those ideals for generations. The path forward is not to erase that history or to be paralyzed by it, but to acknowledge it honestly, make meaningful amends where possible, and build systems that deliver on the promise of equal justice under law for every American regardless of race, gender, religion, sexual orientation, disability, or background. Justice is not a zero-sum game. Lifting up those who have been systematically excluded does not diminish anyone else; it strengthens the entire nation. Reconciliation is not weakness. It is the most demanding and most necessary work a society can undertake.
+    </div>
+
+    <h2>Diversity, Equity & Inclusion</h2>
+    <p>Diversity, Equity, and Inclusion initiatives exist because the playing field has never been level. Systemic barriers in education, employment, housing, healthcare, and the justice system have prevented millions of Americans from fully participating in the opportunities that this nation promises. DEI is not about giving anyone an unfair advantage. It is about identifying and dismantling the unfair disadvantages that have been baked into our systems for generations.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Reinstate and strengthen</strong> DEI initiatives across all federal agencies and departments, with clear goals, measurable outcomes, and accountability mechanisms.</li>
+        <li><strong>Require</strong> pay equity audits for all federal contractors and publicly traded corporations, with public disclosure of findings and binding corrective action requirements for organizations with documented pay disparities.</li>
+        <li><strong>Protect</strong> DEI programs from political interference by establishing their legal foundation in civil rights law rather than executive order, making them resistant to reversal by future administrations.</li>
+      </ul>
+    </div>
+
+    <h2>Criminal Justice Reform</h2>
+    <p>The United States incarcerates more people per capita than any other nation on Earth. Our criminal justice system disproportionately impacts communities of color, low-income communities, and people with mental illness, reflecting not just individual criminal behavior but the compounding effects of systemic inequality, inadequate mental health treatment, and policies that have prioritized punishment over rehabilitation. A just criminal justice system does not just punish; it rehabilitates, restores, and prevents.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Eliminate</strong> mandatory minimum sentences for nonviolent offenses, restoring judicial discretion and ensuring that sentences are proportional to the offense and the individual circumstances of the offender. <strong>Review and commute</strong> existing sentences that are disproportionate under reformed sentencing guidelines.</li>
+        <li><strong>Dramatically reduce</strong> incarceration rates through sentencing reform, expanded diversion programs, drug decriminalization for personal use quantities, and investment in the community-based alternatives to incarceration that address the root causes of criminal behavior.</li>
+        <li><strong>Transform</strong> the purpose of incarceration from purely punitive to genuinely rehabilitative. Every incarcerated individual shall have access to education, vocational training, mental health treatment, and substance abuse recovery programs. Reentry programs shall provide meaningful support for individuals leaving incarceration.</li>
+        <li><strong>Phase out</strong> the use of private, for-profit prisons and detention facilities, recognizing that the profit motive is fundamentally incompatible with the goals of justice, rehabilitation, and humane treatment.</li>
+      </ul>
+    </div>
+
+    <h2>Police Reform & Accountability</h2>
+    <p>Law enforcement plays a vital and necessary role in maintaining public safety. The vast majority of police officers serve their communities with professionalism and dedication. But the documented pattern of excessive force, racial bias, and lack of accountability that has characterized too many interactions between law enforcement and communities of color represents a genuine crisis, of both justice and public trust. Reform is not anti-police. It is pro-accountability, and accountability makes institutions stronger.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish</strong> federal minimum standards for use of force by law enforcement, requiring that force be used only as a last resort, be proportional to the threat, and prioritize de-escalation at every opportunity. <strong>Ban</strong> chokeholds and no-knock raids except in the most extreme circumstances.</li>
+        <li><strong>Establish</strong> a national law enforcement misconduct registry to prevent officers who have been dismissed for misconduct from simply moving to another jurisdiction. <strong>Require</strong> body cameras for all officers engaged in field operations with mandatory retention protocols and clear public release standards.</li>
+        <li><strong>Establish</strong> independent civilian oversight boards with real investigative authority and the power to impose binding disciplinary recommendations in all jurisdictions receiving federal law enforcement funding.</li>
+        <li><strong>Redirect</strong> mental health crisis calls away from armed law enforcement response toward trained mental health crisis teams, recognizing that armed officers are not the appropriate first responder for mental health emergencies in most circumstances.</li>
+      </ul>
+    </div>
+
+    <h2>Native American Justice & Reconciliation</h2>
+    <p>The United States was built on the displacement, dispossession, and systematic destruction of the Native American peoples who inhabited this land for thousands of years before European arrival. The treaties signed with Native nations were repeatedly broken. The cultures, languages, and families of Native peoples were systematically attacked through policies of forced assimilation that constitute cultural genocide. Acknowledging this history honestly and making meaningful amends is not just a moral obligation; it is a prerequisite for genuine national reconciliation.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish</strong> a federal reparations program for Native American tribes and individuals, developed in genuine partnership with tribal nations and grounded in honest accounting of the historical and ongoing economic harms caused by federal policy.</li>
+        <li><strong>Develop</strong> a comprehensive framework, in partnership with tribal nations, for the return of tribal lands that were taken in violation of treaties or through coercive or fraudulent means. Where direct land return is not possible, establish equivalent compensation mechanisms developed in partnership with affected tribes.</li>
+        <li><strong>Invest</strong> significantly in Native American communities, addressing the chronic underfunding of education, healthcare, housing, water infrastructure, and economic development on tribal lands.</li>
+        <li><strong>Reaffirm and strengthen</strong> the federal government's recognition of tribal sovereignty as a foundational principle of the government-to-government relationship between the United States and federally recognized tribal nations. This means honoring treaty obligations in full, consulting meaningfully with tribal governments before taking federal actions that affect tribal lands or interests, supporting tribal self-governance and self-determination in the administration of federal programs, and fully funding the Indian Health Service, Bureau of Indian Education, and other federal trust obligations at levels commensurate with treaty commitments and documented need.</li>
+      </ul>
+    </div>
+
+    <h2>Black American Reparations</h2>
+    <p>The enslavement of African Americans was not merely a historical injustice; it was the foundational economic engine of American prosperity, built on the forced, uncompensated labor of millions of human beings who were legally classified as property. The formal end of slavery did not end the systematic economic and social oppression of Black Americans; it was followed by a century of Jim Crow laws, convict leasing, redlining, discriminatory exclusion from New Deal programs, GI Bill benefits, and federally subsidized homeownership opportunities that built the white middle class while systematically excluding Black Americans. The wealth gap between Black and white Americans today is not an accident; it is the direct, measurable, compounding consequence of centuries of deliberate government-sanctioned theft of Black labor, wealth, land, and opportunity.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish</strong> a federal Commission on Reparations for Black Americans, composed of historians, economists, legal scholars, community representatives, and descendants of enslaved people, tasked with conducting a comprehensive study of the economic and social impacts of slavery, Jim Crow, and subsequent discriminatory federal policies on Black Americans and their descendants.</li>
+        <li><strong>Address</strong> the specific harms caused by identifiable federal policies, including the discriminatory administration of New Deal programs, the GI Bill, and federally backed mortgage programs, through targeted remediation programs directed at the descendants of those who were explicitly excluded from these wealth-building opportunities.</li>
+        <li><strong>Acknowledge</strong> formally and officially through congressional resolution and presidential proclamation the federal government's direct role in the establishment, perpetuation, and defense of slavery and the subsequent system of racial apartheid that denied Black Americans the full rights of citizenship for a century after emancipation.</li>
+      </ul>
+    </div>
+
+    <h2>LGBTQ+ Rights & Protections</h2>
+    <p>Every American, regardless of sexual orientation or gender identity, deserves the full protection of the law and the full enjoyment of the rights and opportunities that this nation promises. Discrimination against LGBTQ+ Americans in employment, housing, healthcare, and public accommodations is not a religious freedom; it is a civil rights violation that has no place in a just society.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Pass and enforce</strong> comprehensive federal civil rights protections for LGBTQ+ Americans, explicitly prohibiting discrimination in employment, housing, healthcare, education, and public accommodations.</li>
+        <li><strong>Protect</strong> the right of transgender Americans to access medically necessary healthcare, including the right of transgender youth to receive appropriate medical care with the support of their parents and medical providers, free from government interference.</li>
+        <li><strong>Prohibit</strong> conversion therapy for minors nationwide, recognizing it as a discredited and harmful practice that causes lasting psychological damage.</li>
+      </ul>
+    </div>
+
+    <h2>Women's Rights & Reproductive Justice</h2>
+    <p>Women's rights are human rights. The right of every woman to make decisions about her own body, health, and future is fundamental to her dignity, autonomy, and equal participation in society. The rollback of reproductive rights represents a profound assault on women's freedom and must be reversed and permanently protected.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Codify</strong> the right to abortion into federal law, establishing a clear and enforceable national standard that protects women's access to reproductive healthcare regardless of the state in which they live.</li>
+        <li><strong>Address</strong> the maternal mortality crisis, which disproportionately impacts Black women, through investment in maternal healthcare, implicit bias training for medical providers, and expanded Medicaid coverage for postpartum care.</li>
+        <li><strong>Ensure</strong> universal access to contraception, reproductive healthcare, and comprehensive sex education, recognizing that prevention is both more humane and more effective than prohibition.</li>
+        <li><strong>Strengthen</strong> protections against workplace discrimination, sexual harassment, and gender-based violence, with robust enforcement mechanisms and meaningful penalties for violations.</li>
+      </ul>
+    </div>
+
+    <h2>Sexual Assault Laws & Enforcement Reform</h2>
+    <p>Sexual assault is among the most underreported, underprosecuted, and inadequately addressed crimes in America. Estimates consistently show that the majority of sexual assaults are never reported to law enforcement, that a fraction of reported assaults result in arrest, and that an even smaller fraction result in conviction. Hundreds of thousands of rape kits sit untested in evidence storage facilities across the country, representing both a failure of justice for survivors and a documented public safety risk as serial offenders remain unidentified. The system’s failures are not primarily the result of insufficient laws; they are the result of inadequate resources, institutional cultures that discourage reporting, and legal frameworks that place excessive evidentiary burdens on survivors.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish and fully fund</strong> a National Rape Kit Backlog Elimination Program, requiring that all previously collected and untested rape kits be processed within five years, and mandating that all newly collected rape kits be tested within 120 days of collection. <strong>Provide</strong> federal grants to state and local law enforcement agencies to fund the personnel, laboratory capacity, and technology necessary to meet these timelines.</li>
+        <li><strong>Reform</strong> statute of limitations laws for sexual assault at the federal level and incentivize equivalent reform at the state level, recognizing that survivors often do not disclose assaults for years or decades due to trauma, shame, fear of disbelief, and the documented psychological effects of sexual violence. Civil and criminal statutes of limitations for sexual assault shall reflect the reality of trauma response rather than administrative convenience.</li>
+        <li><strong>Establish</strong> mandatory specialized training in trauma-informed investigation and prosecution techniques for all law enforcement officers and prosecutors who handle sexual assault cases, replacing investigation approaches that have historically discouraged reporting and increased the re-traumatization of survivors.</li>
+        <li><strong>Extend and strengthen</strong> the Violence Against Women Act, expanding its protections to all survivors regardless of gender, sexual orientation, immigration status, or tribal membership, ensuring that federal law enforcement tools and resources are available to every survivor in every community.</li>
+        <li><strong>Reform</strong> military sexual assault prosecution by removing the adjudication of sexual assault cases entirely from the chain of command, placing prosecution decisions in the hands of independent military prosecutors with no reporting relationship to the accused’s commanding officer. This reform, long advocated by survivors and military justice experts, addresses the fundamental conflict of interest that has allowed sexual assault to remain pervasive in the military.</li>
+      </ul>
+    </div>
+
+    <h2>Disability Rights</h2>
+    <p>Americans with disabilities deserve full participation in every aspect of public life, in employment, education, transportation, healthcare, and civic engagement. The Americans with Disabilities Act established important protections, but enforcement has been uneven and the needs of the disability community continue to outpace the systems designed to serve them.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Strengthen</strong> enforcement of the ADA and related legislation, with increased funding for the Equal Employment Opportunity Commission and the Department of Justice's Civil Rights Division.</li>
+        <li><strong>Invest</strong> in accessible infrastructure, transportation, and public facilities to ensure that Americans with disabilities can participate fully in public life.</li>
+        <li><strong>Expand</strong> access to home and community-based services that allow Americans with disabilities to live independently and with dignity rather than in institutional settings.</li>
+        <li><strong>Ensure</strong> that healthcare systems fully address the needs of Americans with disabilities, including coverage for assistive technologies, therapies, and specialized care. <strong>Include</strong> disability representation and perspective in all policy development processes.</li>
+      </ul>
+    </div>
+
+    <h2>Prison Conditions, Solitary Confinement & Juvenile Justice</h2>
+    <p>The United States incarcerates more people in absolute terms than any other nation on Earth and more per capita than all but a handful of the world's most authoritarian states. The conditions in which those people are held are, in too many cases, a second punishment layered on top of the sentence itself: overcrowding, inadequate medical and mental health care, endemic violence, and the use of solitary confinement for periods that international human rights law classifies as torture. These conditions are not the result of resource scarcity; they are the result of political choices that treat the humane treatment of incarcerated people as a low priority. They also produce worse outcomes: people released from inhumane conditions are more likely, not less, to reoffend.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Prohibit</strong> the use of solitary confinement for more than fifteen consecutive days for any incarcerated person and ban it entirely for juveniles, pregnant individuals, and people with serious mental illness, consistent with the United Nations Nelson Mandela Rules. <strong>Establish</strong> federal minimum standards for prison conditions, healthcare, and mental health treatment that apply to all facilities holding federal detainees including private prisons under federal contract.</li>
+        <li><strong>Establish</strong> a comprehensive juvenile justice reform framework that raises the minimum age for adult prosecution to eighteen in all circumstances, prohibits the incarceration of juveniles in adult facilities, and mandates the use of restorative justice, diversion, and community-based alternatives to incarceration for all but the most serious juvenile offenses. The research is unambiguous: prosecuting and incarcerating young people as adults increases recidivism and destroys life prospects without improving public safety.</li>
+        <li><strong>Address</strong> the wrongful conviction crisis by establishing federal standards for post-conviction review, expanding access to DNA testing for incarcerated individuals who assert innocence, and requiring that prosecutors who engage in documented misconduct face professional consequences including disbarment. <strong>Establish</strong> a National Innocence Commission tasked with identifying and remedying systemic causes of wrongful conviction including eyewitness misidentification, false confessions, junk science, and prosecutorial misconduct.</li>
+      </ul>
+    </div>
+
+    <h2>Reentry, Civil Rights Restoration & the Second Chance</h2>
+    <p>The United States imposes an extensive system of collateral consequences on people with criminal records that extends far beyond the sentence imposed by the court. These consequences, which include barriers to employment, housing, professional licensing, federal student aid, public housing, food assistance, and voting, amount to a second punishment that follows people for the rest of their lives long after they have served their legal sentence. More than 70 million Americans have a criminal record of some kind. The systematic exclusion of this population from full economic and civic participation is not only unjust; it is counterproductive, as it dramatically increases the likelihood of recidivism by making it nearly impossible for returning citizens to meet their basic needs through legitimate means.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish</strong> a comprehensive Clean Slate Act providing for the automatic sealing or expungement of criminal records for non-violent offenses after a defined period of law-abiding conduct following the completion of sentence, removing the barrier of the criminal record from people who have demonstrated rehabilitation without requiring them to navigate a complex petition process.</li>
+        <li><strong>Abolish</strong> the federal ban on SNAP and public housing assistance for people with drug convictions, and <strong>restore</strong> eligibility for federal student aid for all formerly incarcerated individuals.</li>
+      </ul>
+    </div>
+
+    <h2>Department of Justice Reform</h2>
+    <p>The Department of Justice must be and must be seen to be independent: an institution that applies the law equally to all Americans regardless of wealth, power, or political affiliation. When the DOJ is politicized, weaponized against political opponents, or shielded from accountability, the entire foundation of equal justice under law is undermined.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Establish</strong> statutory protections for the independence of the Attorney General and the DOJ from direct presidential interference in specific investigations or prosecutions, codifying the norms of prosecutorial independence that have been eroded in recent years.</li>
+        <li><strong>Reform</strong> prosecutorial conduct standards, establishing clear accountability mechanisms for prosecutors who engage in misconduct including withholding exculpatory evidence, making false statements, or engaging in discriminatory charging decisions.</li>
+        <li><strong>Strengthen</strong> the DOJ's Civil Rights Division with increased funding, staffing, and a renewed mandate to actively investigate and prosecute civil rights violations, voting rights suppression, and hate crimes.</li>
+        <li><strong>Establish</strong> an independent Inspector General for the DOJ with enhanced authority to investigate allegations of political interference, prosecutorial misconduct, and civil rights violations within the department.</li>
+        <li><strong>Ensure</strong> that the equal application of the law is not just a principle but a practice: that no individual, regardless of wealth, political power, or connections, is above the law or immune from accountability for their actions.</li>
+      </ul>
+    </div>
+
+    <h2>Anti-Asian Discrimination & Hate Crime Protections</h2>
+    <p>Anti-Asian hate crimes increased by more than 150 percent in major American cities during the COVID-19 pandemic, driven in part by the deliberate use of racially inflammatory language by political leaders to characterize the virus as foreign and Asian in origin. The surge of violence against Asian Americans exposed the persistent vulnerability of Asian American communities to scapegoating, discrimination, and violence, as well as the chronic undercounting of anti-Asian hate crimes due to underreporting and inconsistent law enforcement tracking. Asian Americans are the fastest-growing racial group in the United States and have faced discrimination embedded in American law and practice since the first Chinese Exclusion Act of 1882.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Fully implement and fund</strong> the COVID-19 Hate Crimes Act, including the establishment of the online hate crime reporting system and the deployment of additional DOJ resources for anti-Asian hate crime investigation and prosecution.</li>
+        <li><strong>Mandate</strong> consistent federal standards for hate crime tracking and reporting that capture anti-Asian incidents with the same rigor applied to other categories of hate crime, and invest in community-based organizations serving Asian American communities in prevention, reporting, and victim support.</li>
+      </ul>
+    </div>
+
+    <h2>Anti-Semitism, Islamophobia & Religious Discrimination</h2>
+    <p>The United States was founded on the principle of religious freedom: the radical idea that government has no business dictating the faith of its citizens or discriminating on the basis of religious belief. Yet anti-Semitism, Islamophobia, and discrimination against other religious minorities remain persistent and in recent years growing threats to the safety, dignity, and equal citizenship of millions of Americans.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Strengthen</strong> federal hate crime laws to ensure that religiously motivated violence and harassment are prosecuted vigorously, and invest in security grants for religious institutions including synagogues, mosques, churches, temples, and other houses of worship that face documented threats.</li>
+        <li><strong>Mandate</strong> anti-bias and religious tolerance education in public schools as part of the Critical Human Rights Theory framework outlined in Pillar 4, ensuring that every American child grows up with an understanding of and respect for the diversity of religious traditions that make up the American mosaic.</li>
+      </ul>
+    </div>
+
+    <h2>Puerto Rico Statehood & The Forgotten Americans of U.S. Territories</h2>
+    <p>The United States governs five permanently inhabited territories: Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Commonwealth of the Northern Mariana Islands. Approximately 3.6 million American citizens and nationals live in these territories, pay federal taxes, serve in the United States military at rates that frequently exceed those of the fifty states, and are subject to federal law in all its dimensions. Yet they have no voting representation in Congress, cannot vote for president, and exist in a constitutional status that the Supreme Court described in the Insular Cases of the early twentieth century using the explicit language of colonialism. Puerto Rico alone has been an American territory for more than 125 years — longer than many of the fifty states have existed — and its 3.2 million citizens remain without full democratic representation. This is not a peripheral issue. It is a fundamental democratic deficit at the heart of the American system, and it demands a structural remedy.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Conduct</strong> a federally administered, binding referendum on Puerto Rico’s political status, offering clearly defined options including statehood, independence, and enhanced commonwealth status, ensuring that the process is transparent, well-informed, and genuinely reflective of the will of the Puerto Rican people. <strong>Congress shall commit</strong> in advance to honor the result.</li>
+        <li><strong>Address</strong> the legacy of federal policies that have contributed to Puerto Rico’s economic challenges, including the Jones Act shipping restrictions that artificially raise the cost of goods on the island, and invest in targeted infrastructure, education, healthcare, and economic diversification. <strong>Extend</strong> Medicaid equity and Social Security equity to Puerto Rico regardless of the outcome of the status referendum, because these are rights that flow from citizenship, not from statehood.</li>
+        <li><strong>Extend</strong> full voting representation in Congress to the residents of all permanently inhabited U.S. territories, either through statehood for those territories that choose it, free association with full citizenship rights, or a new territorial representation framework developed in genuine partnership with the people of each territory through free and fair self-determination processes. No American who bears the obligations of citizenship should be denied the rights of citizenship.</li>
+        <li><strong>Extend</strong> presidential voting rights to all U.S. citizens residing in territories, recognizing that the commander in chief who sends territorial residents to war should be accountable to their votes. <strong>Eliminate</strong> Jones Act shipping restrictions that raise the cost of goods in all island territories and compound the economic disadvantages that territorial status already imposes.</li>
+      </ul>
+    </div>
+
+    <h2>Gun Violence as a Public Health Issue</h2>
+    <p>Gun violence kills tens of thousands of Americans every year through homicide, suicide, domestic violence, mass shootings, and accidental discharge. It is the leading cause of death for American children and adolescents. It costs the American economy hundreds of billions of dollars annually in healthcare costs, lost productivity, and criminal justice expenditures. And yet it has been treated as an intractable political problem rather than what it actually is: a preventable public health crisis that demands the same evidence-based, data-driven response that we apply to every other major cause of preventable death. The specifics of gun reform policy are addressed comprehensively in Pillar 11; this section establishes the public health framework through which gun violence must be understood and addressed.</p>
+    <div class="how-box">
+      <h3>How We Do It</h3>
+      <ul>
+        <li><strong>Formally designate</strong> gun violence as a public health crisis, directing the Centers for Disease Control and Prevention to conduct and fund comprehensive research into the causes, patterns, and prevention of gun violence.</li>
+        <li><strong>Establish</strong> a National Gun Violence Research Institute with dedicated, permanent funding to build the evidence base necessary for effective gun violence prevention policy, drawing on the models of successful public health research programs that have dramatically reduced deaths from motor vehicles, tobacco, and other preventable causes.</li>
+        <li><strong>Integrate</strong> gun violence prevention into the public health infrastructure through hospital-based violence intervention programs, community violence interruption programs, and the training of healthcare providers to identify and respond to gun violence risk factors.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-title">Eleven Pillars of Change</div>
+    <div class="footer-legal">
+      Copyright &copy; Jared Spence, 2026. All rights reserved.<br/>
+      Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>.<br/>
+      Contact: <a href="mailto:eleven-pillars-of-change@outlook.com">eleven-pillars-of-change@outlook.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
